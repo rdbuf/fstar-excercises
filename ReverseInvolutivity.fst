@@ -23,3 +23,10 @@ let rec reverse_involutivity l = match l with
 	| hd :: tl ->
 		reverse_involutivity tl;
 		reverse_snoc_is_cons (reverse tl) hd
+
+val reverse_snoc_is_cons_anotherway : l:list 'a -> x:'a -> Lemma (x :: l == reverse (snoc (reverse l) x))
+let rec reverse_snoc_is_cons_anotherway l x = match l with
+	| [] -> ()
+	| hd :: tl ->
+		reverse_involutivity (x :: l);
+		reverse_snoc_is_cons_anotherway tl x
