@@ -1,1 +1,1 @@
-[F* tutorial](http://www.fstar-lang.org/tutorial/)
+[F* tutorial](https://www.fstar-lang.org/tutorial/tutorial.html)
